@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/assets/css/login.css">
+</head>
+<body>
+	<div class="login-form">
+		<h1 id="login">Login Form</h1>
+		<form action="auth" method="POST">
+			<input type="text" name="email" placeholder="Email" required>
+			<input type="password" name="password" placeholder="Password" required>
+			<input type="submit" id="submit-button">
+		</form>
+	</div>
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-md-12" id="account"> 
+				<div style="background: none" class="jumbotron text-center" id="text-style">
+					<h2 class="tabdisp">Dont have an account?</h2>
+					<p id ="sign-in">Dont have an account with us then click the button below to sign up.</p>
+					<button class="btn-primary"><a href="/signup" type="submit" id="button">Sign Up</a></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

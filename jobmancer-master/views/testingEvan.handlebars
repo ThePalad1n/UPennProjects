@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/testing.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <title>Job Mancer | ZAP</title>
+</head>
+
+<body>
+
+    <div class="resume">
+        <div class="resume_left">
+            <div class="resume_profile">
+                <img src="https://lh3.googleusercontent.com/proxy/5K2GH66MldIFq74QlY0TdSc6xQvoA3rIGV_Dw_DtkpD96NTy8bt6QEcczulnQ3q6IC0oT5kkbm1Zy2abttuNXOn6r-wAh9C_1Lg3imV4LutU3jGWdb_-hGMu800"
+                    alt="profile_pic">
+            </div>
+            <div class="resume_content">
+                <div class="resume_item resume_info">
+                    <div class="title">
+                        <p class="bold">{{{user.dataValues.fullName}}}</p>
+                        <p class="regular">{{{user.dataValues.curTitle}}}</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-map-signs"></i>
+                            </div>
+                            <div class="data">
+                                {{{user.dataValues.street}}}, {{{user.dataValues.ustate}}} <br />
+                                {{{user.dataValues.country}}}
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="data">
+                                <p>{{{user.dataValues.phone}}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="data">
+                                <p>{{user.dataValues.email}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fab fa-weebly"></i>
+                            </div>
+                            <div class="data">
+                                <p>{{{user.dataValues.per}}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="resume_item resume_skills">
+                    <div class="title">
+                        <p class="bold">skills</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="skill_name">
+                                <p>{{ski.dataValues.skillName}} - {{ski.dataValues.skillLevel}}</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="skill_name">
+                                <p>{{ski.dataValues.skillName2}} - {{ski.dataValues.skillLevel2}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill_name">
+                                <p>{{ski.dataValues.skillName3}} - {{ski.dataValues.skillLevel3}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill_name">
+                                <p>{{ski.dataValues.skillName4}} - {{ski.dataValues.skillLevel4}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill_name">
+                                <p>{{ski.dataValues.skillName5}} - {{ski.dataValues.skillLevel5}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="resume_item resume_social">
+                    <div class="title">
+                        <p class="bold">Social</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fab fa-stack-overflow"></i>
+                            </div>
+                            <div class="data">
+                                <p class="semi-bold"> {{{user.dataValues.net1}}}</p>
+                                <p>{{{user.dataValues.net_username1}}}</p>
+                                <p>{{{user.dataValues.siteurl1}}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="data">
+                                <p class="semi-bold"> {{{user.dataValues.net2}}}</p>
+                                <p>{{{user.dataValues.net_username2}}}</p>
+                                <p>{{{user.dataValues.siteurl2}}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="data">
+                                <p class="semi-bold"> {{{user.dataValues.net3}}}</p>
+                                <p>{{{user.dataValues.net_username3}}}</p>
+                                <p>{{{user.dataValues.siteurl3}}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="resume_right">
+            {{!-- <div class="resume_item resume_about">
+                <div class="title">
+                    <p class="bold">About us</p>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis illo fugit officiis distinctio
+                    culpa officia totam atque exercitationem inventore repudiandae?</p>
+            </div> --}}
+            <div class="resume_item resume_work">
+                <div class="title">
+                    <p class="bold">Work Experience</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="date">{{{w.dataValues.startDate}}} - {{{w.dataValues.endDate}}}</div>
+                        <div class="info">
+                            <p class="semi-bold">{{{w.dataValues.title}}} - {{{w.dataValues.nameComp}}}</p>
+                            <p>{{{w.dataValues.description1a}}}</p>
+                            <p>{{{w.dataValues.description1b}}}</p>
+                            <p>{{{w.dataValues.description1c}}}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">{{{w.dataValues.startDate2}}} - {{{w.dataValues.endDate2}}}</div>
+                        <div class="info">
+                            <p class="semi-bold">{{{w.dataValues.title2}}} - {{{w.dataValues.nameComp2}}}</p>
+                            <p>{{{w.dataValues.description2a}}}</p>
+                            <p>{{{w.dataValues.description2b}}}</p>
+                            <p>{{{w.dataValues.description2c}}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="resume_item resume_education">
+                <div class="title">
+                    <p class="bold">Education</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="date">{{{ed.dataValues.strtDate}}} - {{{ed.dataValues.endDate}}}</div>
+                        <div class="info">
+                            <p class="semi-bold">{{{ed.dataValues.field}}} ({{{ed.dataValues.instiution}}})</p>
+                            {{!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p> --}}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="resume_item resume_education">
+                <div class="title">
+                    <p class="bold">Certs</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="date"> {{{ce.dataValues.certdate}}} </div>
+                        <div class="info">
+                            <p class="semi-bold">{{{ce.dataValues.awarder}}} - {{{ce.dataValues.title}}}</p> <br>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date"> {{{ce.dataValues.certdate2}}} </div>
+                        <div class="info">
+                            <p class="semi-bold">{{{ce.dataValues.awarder2}}} - {{{ce.dataValues.title2}}}</p>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="resume_item resume_education">
+                <div class="title">
+                    <p class="bold">Extras</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="date">{{{ex.dataValues.strtDate}}} - {{{ex.dataValues.endDate}}} </div>
+                        <div class="info">
+                            <p class="semi-bold">{{{ex.dataValues.org}}}</p>
+                            <p> I was at {{{ex.dataValues.org}}} as a {{{ex.dataValues.pos}}}</p>
+                            <p>{{{ex.dataValues.org}}} website {{{ex.dataValues.pos}}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
